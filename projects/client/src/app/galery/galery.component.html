@@ -1,0 +1,37 @@
+<body>
+  <div class="container">
+    <div style="height: 80px;"></div>
+    <div class="row" style="height: 100vh;">
+      <!-- Nouvelle colonne à gauche -->
+      <div class="col-md-4 margin-top">
+        <h1>{{ title }}</h1>
+        <p>{{ description }}</p>
+        <div class="comment-container">
+          <p class="comment-author">{{ artist }}</p>
+          <p class="comment-text">très bonne peinture ya3tik essa7a</p>
+        </div>
+      </div>
+
+      <!-- Contenu principal au centre -->
+      <div class="col-md-4 d-flex justify-content-center align-items-center mr-2">
+        <div class="image-container d-flex flex-column align-items-center">
+          <div class="image-wrapper">
+            <img [src]="images[currentIndex]" alt="Éclat de Couleurs" class="img-fluid">
+            <div class="overlay">
+              <!-- Additional content to display on hover -->
+              <p>Additional Content Here</p>
+            </div>
+          </div>
+          <p class="price">{{ price }}</p>
+        </div>
+      </div>
+
+      <!-- Images supplémentaires alignées à droite -->
+      <div class="col-md-3 d-flex flex-column align-items-end mt-4">
+        <div *ngFor="let img of images; let i = index" class="mb-2">
+          <img [src]="img" width="165px" alt="Image {{ i }}" class="img-fluid" (click)="selectImage(i)">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

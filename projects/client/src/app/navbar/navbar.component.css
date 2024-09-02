@@ -1,0 +1,32 @@
+/* Style de la navbar */
+.navbar-custom {
+    background-color: rgba(18, 66, 113, 0.2); /* Couleur de fond semi-transparente (ajustez l'opacité selon vos besoins) */
+    color: #fff; /* Couleur du texte */
+    position: fixed; /* Fixe la navbar en haut de la page */
+    width: 100%; /* Prend toute la largeur de la page */
+    top: 0; /* Positionne la navbar en haut */
+    left: 0; /* Positionne la navbar à gauche */
+    z-index: 1000; /* Assure que la navbar est au-dessus du contenu de la page */
+    transition: background-color 0.3s ease; /* Ajoute une transition pour le changement de couleur */
+  }
+  
+  /* Style des liens dans la navbar */
+  .navbar-custom .nav-link {
+    color: #000000; /* Couleur des liens */
+  }
+  
+  /* Style du lien actif */
+  .navbar-custom .nav-link.active-link {
+    color: #ff0000; /* Couleur rouge pour le lien actif */
+  }
+  
+  /* Style au survol et focus des liens */
+  .navbar-custom .nav-link:hover, .navbar-custom .nav-link:focus {
+    color: #ff0000; /* Couleur du texte au survol ou lors du focus */
+  }
+  
+  /* Ajoute un effet de flou si nécessaire */
+  .navbar-custom {
+    backdrop-filter: blur(10px); /* Applique un effet de flou à l'arrière-plan de la navbar */
+  }
+  

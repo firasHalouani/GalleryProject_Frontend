@@ -1,0 +1,429 @@
+#banner{
+    background: radial-gradient(circle at right,#CDEDDD,#C0E9ED,#FCE6D3,#FAD9D5,#FBB7C7);
+    color:#fff;
+    padding-top : 5%;
+  }
+  .title{
+    font-size:20px;
+    font-weight:600;
+    margin-top:10px;
+  }
+  .bottom-img{
+    width:100%;
+    text-decoration:none;
+  }
+  .container {
+    margin-top: 50px; /* Adjust as needed */
+    padding-bottom: 0px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .video-container {
+    padding: 5px;
+    background: #0000; /* Light background for video container */
+    border-radius:5px;
+  
+  }
+  
+  .video-container video {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .text-center {
+    padding: 20px;
+  }
+  
+  .text-center h1 {
+    font-family: 'Montserrat', sans-serif; /* Remplacez par la police de votre choix */
+    font-weight: 900; /* Très gras */
+    color: #343a40; 
+    font-size: 4rem;
+  }
+  
+  .text-center h2 {
+    font-size: 1.75rem;
+    color: #343a40; /* Lighter color for subheading */
+    margin-bottom: 20px;
+  }
+  
+  .text-center p {
+    font-size: 1.2rem;
+    color: #343a40; /* Medium gray for paragraph */
+    margin-bottom: 25px;
+  }
+  
+  .text-center .btn-primary {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: #007bff; /* Primary button color */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .text-center .btn-primary:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  #btn {
+    background-color: #A34343; /* Couleur dorée du bouton */
+    color: #FFFFFF; /* Couleur du texte en blanc */
+    border-radius: 5px; /* Bords arrondis pour un effet élégant */
+    text-decoration: none; /* Enlève le soulignement du lien */
+    font-size: 1.2rem; /* Taille du texte */
+    font-weight: bold; /* Met le texte en gras */
+    display: inline-block; /* Assure que le padding fonctionne correctement */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Animation pour les changements de couleur, de transformation et d'ombre */
+  }
+  
+  #btn:hover {
+    background-color: #75A47F; /* Couleur dorée plus foncée au survol */
+    transform: scale(1.05); /* Agrandit le bouton légèrement au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ajoute une ombre plus marquée pour un effet de profondeur */
+  }
+  
+  #btn:active {
+    background-color: #FFD700; /* Couleur dorée d'origine lorsque le bouton est cliqué */
+    transform: scale(0.98); /* Réduit légèrement la taille du bouton lorsqu'il est cliqué */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre réduite lors du clic */
+  }
+  .container .box
+  {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+  }
+  .container:hover .box
+  {
+      opacity: 0.1;
+      transform: scale(0.9);
+      filter: blur(5px);
+  }
+  .container .box:hover
+  {
+      opacity: 1;
+      transform: scale(1);
+      filter: blur(0);
+  }
+  .container .box:before
+  {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      filter: url(#wavy);
+  }
+  .container .box:nth-child(1):before
+  {
+      background: #ffa90c;
+  }
+  .container .box:nth-child(2):before
+  {
+      background: #fff;
+  }
+  .container .box:nth-child(3):before
+  {
+      background: #0f0;
+  }
+  .container .box .content
+  {
+      position: absolute;
+      padding: 20px;
+      text-align: center;
+      color: #111;
+      transition: 0.5s;
+  }
+  .container .box .content h2
+  {
+      font-size: 2em;
+      margin-bottom: -10px;
+  }
+  svg
+  {
+      width: 0;
+      height: 0;
+  }
+  .about {
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .main {
+    width: 1290px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    animation: imageAnimation 10s infinite;
+    transition: transform 0.5s ease;
+  }
+  
+  .image-container img:nth-child(2) {
+    animation-delay: 3s;
+  }
+  
+  .image-container img:nth-child(3) {
+    animation-delay: 6s;
+  }
+  
+  @keyframes imageAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(1) rotate(0deg);
+    }
+    25% {
+      opacity: 1;
+      transform: scale(1.1) rotate(10deg);
+    }
+    50% {
+      opacity: 0;
+      transform: scale(1) rotate(0deg);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1) rotate(0deg);
+    }
+  }
+  
+  .all-text {
+    width: 600px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  .all-text h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    color: #777777;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  
+  .all-text h1 {
+    font-size: 25px;
+    color: #111111;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .all-text p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #777777;
+    line-height: 30px;
+    margin-bottom: 35px;
+  }
+  
+  .btn button {
+    background: #A34343;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    box-shadow: 0px 16px 32px 0px rgb(0 0 0 / 6%);
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  
+  .btn button:hover {
+    background-color: #CDEDDD;
+  }
+  /* Map Section */
+  .location {
+      background-color: #fff;
+      padding: 60px 0;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+  }
+  
+  .location h2 {
+      font-size: 36px;
+      color: #444;
+      margin-bottom: 20px;
+  }
+  
+  .location p {
+      font-size: 20px;
+      color: #777;
+      margin-bottom: 40px;
+  }
+  
+  .map-container {
+    position: relative;
+    width: 70%;
+    margin: 0 auto; /* Pour centrer horizontalement */
+    padding: 20%; /* Ajustez cette valeur pour réduire ou augmenter la hauteur */
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+  
+  .map-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+  }
+  
+  .map-container:hover {
+      transform: scale(1.05);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  footer{
+    position: relative;
+    width:100%;
+    background-color:#0056b3;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .social_icon{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  footer .social_icon li 
+  {
+    list-style: none;
+  }
+  
+  footer .social_icon li 
+  {
+    font-size: 2em;
+    color: #fff;
+    margin:0 10px;
+    display: inline-block;
+    transition:0.5s;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px 0;
+  }
+  
+  .footer-section h2, .footer-section h3 {
+    margin-bottom: 20px;
+  }
+  
+  .footer-section p {
+    margin: 10px 0;
+  }
+  
+  /* Social Icons */
+  .social-icons {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .social-icon {
+    margin-right: 15px;
+    font-size: 20px;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .social-icon:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .footer-section {
+        margin: 20px auto;
+    }
+  }
+  
+  /* Background Animation */
+  .footer::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: rgba(255, 255, 255, 0.1);
+    animation: rotateBackground 30s linear infinite;
+  }
+  
+  @keyframes rotateBackground {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+  }

@@ -1,0 +1,91 @@
+.event-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #eeededcb;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    max-width: 1200px; /* Augmenter la largeur maximale pour plus d'espace */
+    display: flex;
+    align-items: flex-start; /* Aligner les éléments au début */
+    gap: 20px; /* Ajouter de l'espace entre les colonnes */
+}
+
+.event-image-container {
+    position: relative;
+    flex: 1;
+    text-align: center;
+}
+
+.event-image {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%; /* Assurer que l'image s'adapte au conteneur */
+    height: auto;
+}
+
+.event-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.join-button {
+    display: block;
+    margin: 10px auto 0; /* Espace au-dessus du bouton et centrer horizontalement */
+    padding: 12px 30px;
+    background-color: #f0f3f631;
+    color: rgb(221, 87, 87);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(239, 236, 236, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid rgb(221, 87, 87);
+}
+
+.join-button:hover {
+    background-color: #f1f4f67a;
+    box-shadow: 0 6px 12px rgb(221, 87, 87,0.2);
+}
+
+.event-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px; /* Ajouter de l'espace entre les éléments de détail */
+}
+
+.event-details h1 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: rgb(221, 87, 87);
+    margin-bottom: 10px;
+}
+
+.event-details p {
+    font-family: 'Georgia', serif;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.event-thumbnails {
+    display: flex;
+    justify-content: center; /* Center images horizontally */
+    gap: 10px; /* Espacement entre les images */
+}
+
+.event-thumbnails img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.event-thumbnails img:hover {
+    transform: scale(1.1);
+}
+.event-time {
+    text-align: center; /* Centrer le texte de l'heure */
+}

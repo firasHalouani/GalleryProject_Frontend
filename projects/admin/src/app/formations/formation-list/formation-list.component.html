@@ -1,0 +1,48 @@
+<p-toast></p-toast>
+<div class="admin-page">
+    <p-card header="Formations" subheader="Liste des formations">
+        <div class="p-grid">
+            <div class="p-col-12">
+                <p-toolbar>
+                    <div class="p-toolbar-group-left">
+                        <p-button label="Ajouter une formation" icon="pi pi-plus" styleClass="p-button-success" routerLink="/formations/form"></p-button>
+                    </div>
+                </p-toolbar>
+            </div>
+        </div><br>
+        <div class="p-grid">
+            <div class="p-col-12">
+                <p-table [paginator]="true" [rows]="5" [value]="formations" styleClass="p-datatable-gridlines" [tableStyle]="{'min-width': '50rem'}">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th>Id</th>
+                            <th>Date Début</th>
+                            <th>Date Fin</th>
+                            <th>Description</th>
+                            <th>Formateur</th>
+                            <th>Titre</th>
+                            <th>Prix</th>
+                            <th>Actions</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-formation>
+                        <tr>
+                            <td>{{formation.id}}</td>
+                            <td>{{formation.debut | date:'shortDate'}}</td>
+                            <td>{{formation.fin | date:'shortDate'}}</td>
+                            <td>{{formation.description}}</td>
+                            <td>{{formation.formateur}}</td>
+                            <td>{{formation.name}}</td>
+                            <td>{{formation.prix | currency}}</td>
+                            <td>
+                                <p-button icon="pi pi-trash"  (click)="deleteFormation(formation.id)" styleClass="p-button-danger mr-2">supprimer</p-button>
+                                <p-button icon="pi pi-pencil" (click)="navigateToUpdate(formation.id , formation.name , formation.description , formation.formateur , formation.debut , formation.fin , formation.heures , formation.prix , formation.image )" styleClass="p-button-help">modifier</p-button>
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+        </div>
+    </p-card>
+</div>
+<p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000" rejectButtonStyleClass="p-button-text"></p-confirmDialog>

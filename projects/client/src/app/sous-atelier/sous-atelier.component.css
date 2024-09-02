@@ -1,0 +1,117 @@
+.card{
+    max-width: 100em;
+    flex-direction: row;
+    box-shadow: 0 10px 10px #898989;
+    margin-top: 50px;
+    
+}
+.card img{
+    max-width: 25%;
+    margin:auto;
+    padding:0.5em;
+    border-radius:80px;
+}
+.card-body{
+    display: flex
+    ;
+    justify-content: space-between;
+}
+.text-section{
+    max-width:60%;
+  
+}
+.cta-section {
+    max-width: 40%;
+    display:flex;
+    flex-direction: column;
+    align-items: end;
+}
+.cta-section .btn{
+    padding: 0.3em 0.5em;
+    background-color: #898989;
+    border-color: #898989;
+}
+
+
+/* Bannière Atelier */
+.atelier-banner {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.atelier-banner img {
+    position: absolute;
+  
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Position the image behind the content */
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for text contrast */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.banner-content {
+    color: rgb(0, 0, 0);
+    padding: 20px;
+}
+
+.banner-content h1, .banner-content p {
+    margin: 0;
+    padding: 0;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.banner-content p {
+    font-size: 1.25rem;
+    animation: fadeInUp 1.25s ease-out 0.5s;
+}
+/* Utilisation de Flexbox pour aligner les cartes en ligne */
+.row {
+
+    display: flex;
+     padding-left: 150px;
+    gap: 15px; /* Espace entre les cartes */
+}
+
+.heading{
+	font-size: 15px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.btn {
+    
+    margin-left: 50px;
+     font-size: 1rem;
+     color: rgb(255, 255, 255);
+     background-color: #c7af28;
+     border-radius: 5px;
+     text-decoration: none;
+     text-align: center;
+     
+ }
+ .btn:hover {
+     background-color: #7b7575;
+ }
+.cta-section .btn{
+    background-color: #c7af28;
+}

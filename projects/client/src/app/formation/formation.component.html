@@ -1,0 +1,60 @@
+<div class="container my-4">
+  <div style="height: 100px;"></div>
+  <h2 class="text-center mb-4">Nos Formations</h2>
+  <div class="row">
+    <div class="col-md-3 filter-section">
+      <h4>Filtrer par prix</h4>
+      <input
+        type="number"
+        class="form-control mb-2"
+        placeholder="Prix min"
+        [(ngModel)]="minPrice"
+      />
+      <input
+        type="number"
+        class="form-control mb-2"
+        placeholder="Prix max"
+        [(ngModel)]="maxPrice"
+      />
+    </div>
+    <div class="col-md-9">
+      <div class="mb-4">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Rechercher une formation..."
+          [(ngModel)]="searchTerm"
+        />
+      </div>
+      <div class="row">
+        <div
+          *ngFor="let formation of filterFormations()"
+          class="col-md-4 mb-4"
+        >
+          <div class="card h-100 d-flex flex-column">
+            <img
+              [src]="'../../assets/images/'+formation.image"
+              class="card-img-top"
+              alt="{{ formation.name }}"
+            />
+            <div class="card-body d-flex flex-column flex-grow-1">
+              <div class="d-flex">
+                <p class="price">{{ formation.prix }} dt</p>
+              </div>
+              <h3 class="card-title">{{ formation.name }}</h3>
+              <p class="card-text flex-grow-1">{{ formation.description }}</p>
+              <div class="mt-auto text-center">
+                <button
+                  class="btn btn-primary"
+                  (click)="navigateToParticipation()"
+                >
+                  Participer
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

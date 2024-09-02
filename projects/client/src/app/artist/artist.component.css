@@ -1,0 +1,72 @@
+.bg{
+    background: #b17e64;
+    height: 100%;
+}
+.container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+  }
+  
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    height: 400px;
+    max-width: 350px;
+    display: flex;
+    padding-top: 25px;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: black;
+    position: relative;
+    background: linear-gradient(135deg, #b89376, #a28070); /* Dégradé de couleurs */
+  }
+  
+  .image-container {
+    position: absolute;
+    transform: translateX(50%);
+    z-index: 0;
+  }
+  
+  .card-img-top {
+    width: 100%; /* Assure que l'image utilise toute la largeur de la carte */
+    border-radius: 10px;
+  }
+  
+  .card-body {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 0;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    width: 20ch; /* Limite à environ 20 caractères par ligne */
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    width: 20ch; /* Limite à environ 20 caractères par ligne */
+  }
+  
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-container {
+    text-align: left;
+    margin-top: auto;
+  }
+  

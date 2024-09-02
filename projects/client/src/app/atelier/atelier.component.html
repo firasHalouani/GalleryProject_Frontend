@@ -1,0 +1,31 @@
+
+<div style="height: 67px;"></div>
+<div class="blue-background">
+  <h2 class="text-center mb-4">Découvrez Nos Ateliers</h2>
+  <div class="center-content">
+    <p class="centered-text">Explorez et inscrivez-vous à nos ateliers créatifs dès maintenant</p>
+  </div>
+</div>
+<div class="container my-4">  
+  <div class="row">
+    <div>
+      <div class="row">
+        <div *ngFor="let formation of filterFormations()" class="col-md-4 mb-4">
+          <div class="card h-100 position-relative">
+            <div class="card-padding">
+              <img [src]="formation.imageUrl" class="card-img-top" alt="{{ formation.title }}">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">{{ formation.title }}</h3>
+                <hr>
+                <p class="card-text">{{ formation.description }}</p>
+                <div class="btn-container">
+                  <button class="btn btn-warning" (click)="navigateToParticipation()">Voir plus</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

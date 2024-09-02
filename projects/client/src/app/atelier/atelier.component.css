@@ -1,0 +1,100 @@
+.container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .card {
+    border-radius: 0% 28% 0 28%; /* Demi-cercle pour les coins supérieurs */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Assure que le contenu de la carte ne déborde pas des coins arrondis */
+  }
+  
+  .card-img-top {
+    border-radius: 0% 28% 0 28%; /* Assurez-vous que l'image suit également le même arrondi */
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  
+  .card-padding {
+    padding: 0px;
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Permet à la card-body de prendre tout l'espace vertical disponible */
+    position: relative; /* Nécessaire pour positionner le bouton à l'intérieur de la card-body */
+    padding-bottom: 50px; /* Ajoutez du padding en bas pour éviter que le texte chevauche le bouton */
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  
+  .card-text {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #5cd4ef;
+    margin-left: auto;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-container {
+    position: absolute;
+    bottom: 10px; /* Place le bouton à 10px du bas de la card */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+  }
+  .center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px; /* Ajustez cette valeur en fonction de vos besoins */
+    margin-bottom: 20px;
+  }
+  
+  .centered-text {
+    text-align: center;
+    font-size: 1.2rem; /* Ajustez la taille de la police selon vos préférences */
+    color: #333;
+  }
+  .blue-background {
+    position: relative; /* Nécessaire pour positionner correctement le pseudo-élément */
+    padding: 30px;
+  }
+  
+  .blue-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../../assets/sd.jpg");
+    background-size: cover; /* Assure que l'image couvre tout l'élément */
+    background-position: center;
+    opacity: 0.6; /* Changez cette valeur pour ajuster l'opacité */
+    z-index: 1; /* Place le pseudo-élément derrière le contenu */
+  }
+  
+  .blue-background > * {
+    position: relative;
+    z-index: 2; /* Assure que le contenu reste devant l'image */
+  }
+  
+  

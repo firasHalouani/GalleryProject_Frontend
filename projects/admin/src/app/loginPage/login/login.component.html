@@ -1,0 +1,27 @@
+<div class="login-container">
+    <div class="login-form">
+      <h2 class="login-title">Connexion</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="email">Adresse Email</label>
+          <input type="email" id="email" formControlName="email" name="email" placeholder="Entrez votre email" required>
+          <div *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid">
+            <span class="error-message">Veuillez entrer une adresse email valide.</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" formControlName="password" name="password" placeholder="Entrez votre mot de passe" required>
+          <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+            <span class="error-message">Veuillez entrer votre mot de passe.</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+        </div>
+        <button type="submit" [disabled]="loginForm.invalid" class="login-button">Se connecter</button>
+      </form>
+      <!-- <p class="register-link">Vous n'avez pas de compte ? <a href="#">S'inscrire</a></p> -->
+    </div>
+  </div>
+  

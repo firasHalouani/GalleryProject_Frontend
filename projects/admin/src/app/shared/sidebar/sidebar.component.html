@@ -1,33 +1,34 @@
 <div class="admin-sidebar">
     <div class="logo">
-        <img src="/assets/images/logoK.png" width="130px" alt="Logo">
+      <img src="/assets/images/logoK.png" width="130px" alt="Logo">
     </div>
     <div class="links">
-        <ul>
-            <li>
-                <a routerLink="/"><i class="pi pi-home"></i> Dashboard</a>
-            </li>
-            <li>
-                <a routerLink="/ateliers"><i class="pi pi-prime"></i> Ateliers</a>
-            </li>
-            <li>
-                <a routerLink="/sousAteliers"><i class="pi pi-clone"></i> sousAteliers</a>
-            </li>
-            <li>
-                <a routerLink="/formations"><i class="pi pi-list"></i> Formations</a>
-            </li>
-            <li>
-                <a routerLink="/evenements"><i class="pi pi-calendar-plus"></i> Événements</a>
-            </li>
-            <li>
-                <a routerLink="/artists"><i class="pi pi-star"></i> Artists</a>
-            </li>
-            <li>
-                <a routerLink="/users"><i class="pi pi-users"></i> Utilisateurs</a>
-            </li>
-            <li>
-                <a class="logout"><i class="pi pi-sign-out"></i> Déconnexion</a>
-            </li>
-        </ul>
+      <ul>
+        <li>
+          <a routerLink="/accueil"><i class="pi pi-home"></i> Dashboard</a>
+        </li>
+        <li>
+          <a routerLink="/accueil/ateliers"><i class="pi pi-prime"></i> Ateliers</a>
+        </li>
+        <li>
+          <a routerLink="/accueil/sousAteliers"><i class="pi pi-clone"></i> sousAteliers</a>
+        </li>
+        <li>
+          <a routerLink="/accueil/formations"><i class="pi pi-list"></i> Formations</a>
+        </li>
+        <li>
+          <a routerLink="/accueil/evenements"><i class="pi pi-calendar-plus"></i> Événements</a>
+        </li>
+        <li>
+          <a routerLink="/accueil/artists"><i class="pi pi-star"></i> Artists</a>
+        </li>
+        <li>
+          <a routerLink="/accueil/users"><i class="pi pi-users"></i> Utilisateurs</a>
+        </li>
+        <li>
+            <a (click)="logout()" class="/logout"><i class="pi pi-sign-out"></i> Déconnexion</a>
+        </li>
+      </ul>
     </div>
-</div>
+  </div>
+  

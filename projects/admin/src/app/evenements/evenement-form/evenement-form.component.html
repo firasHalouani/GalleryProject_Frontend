@@ -1,1 +1,46 @@
-<p>evenement-form works!</p>
+<p-card header="Ajouter un Événement">
+    <form [formGroup]="evenementForm" (ngSubmit)="onSubmit()">
+      <div class="p-field">
+        <label for="name">Titre</label>
+        <input id="name" type="text" pInputText formControlName="name" />
+        <div *ngIf="evenementForm.controls['name'].invalid && evenementForm.controls['name'].touched">
+          <small class="p-error">Le titre est requis.</small>
+        </div>
+      </div>
+  
+      <div class="p-field">
+        <label for="description">Description</label>
+        <textarea id="description" pInputTextarea formControlName="description"></textarea>
+        <div *ngIf="evenementForm.controls['description'].invalid && evenementForm.controls['description'].touched">
+          <small class="p-error">La description est requise.</small>
+        </div>
+      </div>
+  
+      <div class="p-field">
+        <label for="dateDebut">Date de début</label>
+        <input id="dateDebut" type="date" formControlName="dateDebut" />
+        <div *ngIf="evenementForm.controls['dateDebut'].invalid && evenementForm.controls['dateDebut'].touched">
+          <small class="p-error">La date de début est requise.</small>
+        </div>
+      </div>
+  
+      <div class="p-field">
+        <label for="dateFin">Date de fin</label>
+        <input id="dateFin" type="date" formControlName="dateFin" />
+        <div *ngIf="evenementForm.controls['dateFin'].invalid && evenementForm.controls['dateFin'].touched">
+          <small class="p-error">La date de fin est requise.</small>
+        </div>
+      </div>
+  
+      <div class="p-field">
+        <label for="prix">Prix</label>
+        <input id="prix" type="number" formControlName="prix" />
+        <div *ngIf="evenementForm.controls['prix'].invalid && evenementForm.controls['prix'].touched">
+          <small class="p-error">Le prix est requis.</small>
+        </div>
+      </div>
+  
+      <p-button label="Ajouter" type="submit" [disabled]="evenementForm.invalid"></p-button>
+    </form>
+  </p-card>
+  

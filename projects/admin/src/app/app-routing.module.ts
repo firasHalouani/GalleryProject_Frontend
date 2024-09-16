@@ -15,10 +15,17 @@ import { SousAtelierListComponent } from './sousAteliers/sous-atelier-list/sous-
 import { SousAtelierFormComponent } from './sousAteliers/sous-atelier-form/sous-atelier-form.component';
 import { ArtistListComponent } from './artists/artist-list/artist-list.component';
 import { ArtistFormComponent } from './artists/artist-form/artist-form.component';
+import { LoginComponent } from './loginPage/login/login.component';
+
+// Guard pour protéger les routes après connexion
 
 const routes: Routes = [
+  // Route principale pour la page de login
+  { path: '', component: LoginComponent },
+
+  // Regroupe toutes les autres routes protégées sous le ShellComponent
   {
-    path: '',
+    path: 'accueil',
     component: ShellComponent,
     children: [
       { path: '', component: DashboardComponent },
@@ -49,6 +56,9 @@ const routes: Routes = [
       { path: 'users/form/:id', component: UtilisateurFormComponent },
     ],
   },
+
+  // Redirection par défaut vers la page de login si aucune route ne correspond
+  { path: '**', redirectTo: 'login', pathMatch: 'full' },
 ];
 
 @NgModule({

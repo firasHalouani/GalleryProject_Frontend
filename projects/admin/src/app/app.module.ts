@@ -43,6 +43,7 @@ import { ArtistListComponent } from './artists/artist-list/artist-list.component
 import { ArtistFormComponent } from './artists/artist-form/artist-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormationUpdateComponent } from './formations/formation-update/formation-update.component';
+import { LoginComponent } from './loginPage/login/login.component';
 
 
 @NgModule({
@@ -73,6 +74,7 @@ import { FormationUpdateComponent } from './formations/formation-update/formatio
     ArtistListComponent,
     ArtistFormComponent,
     FormationUpdateComponent,
+    LoginComponent,
   ],
   imports: [
     HttpClientModule,
@@ -90,7 +92,7 @@ import { FormationUpdateComponent } from './formations/formation-update/formatio
     EditorModule,
     ReactiveFormsModule,
     CommonModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
     provideClientHydration(),
